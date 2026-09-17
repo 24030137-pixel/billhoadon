@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 st.set_page_config(page_title="Order Nhà Hàng", layout="wide")
 
-st.title("🍽️ Hệ thống Order Nhà Hàng - VŨ ĐỨC BÌNH")
+st.title("🍽️ Hệ thống Order Nhà Hàng - Liên Sen town")
 
 # ==========================
 # Khởi tạo dữ liệu
@@ -27,7 +27,7 @@ menu = {
         "Bít tết Bò Mỹ": 250000,
         "Sườn nướng BBQ": 180000,
         "Cánh gà chiên mắm": 75000,
-        "Lẩu cá diêu hồng": 200000,
+        "Lẩu cá diêu hồng": 199000,
         "Lẩu Thái hải sản": 300000,
         "Lẩu cá kèo": 140000
     },
@@ -114,7 +114,7 @@ if page == "🍽️ Order":
 
             df = pd.DataFrame.from_dict(
                 st.session_state.order_dict,
-orient="index"
+                orient="index"
             )
 
             st.table(df)
@@ -214,4 +214,4 @@ else:
 
                 st.write(
                     f"### Tổng tiền: {bill['Tổng tiền']:,.0f} VNĐ"
-                )
+            
